@@ -1,46 +1,26 @@
 package com.nyekilajos.homemoodligtingclient;
 
 import roboguice.activity.RoboActionBarActivity;
-import roboguice.inject.ContextScopedProvider;
-import roboguice.inject.InjectView;
 
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.NavigationView;
-import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 
-import com.google.inject.Inject;
+import com.nyekilajos.homemoodligtingclient.fragment.AboutFragment;
+import com.nyekilajos.homemoodligtingclient.fragment.BedroomFragment;
+import com.nyekilajos.homemoodligtingclient.fragment.LivingroomFragment;
+import com.nyekilajos.homemoodligtingclient.fragment.SendSingleDataFragment;
+import com.nyekilajos.homemoodligtingclient.fragment.SettingsFragment;
 
 public class MainActivity extends RoboActionBarActivity implements NavigationView.OnNavigationItemSelectedListener {
-
-    @InjectView(R.id.ip_address)
-    private EditText ipAddress;
-    @InjectView(R.id.port)
-    private EditText port;
-    @InjectView(R.id.messege_to_be_sent)
-    private EditText message;
-    @InjectView(R.id.send_button)
-    private Button send;
-
-    @Inject
-    private ContextScopedProvider<SendMessageTask> sendMessageTaskProvider;
-
-    private final View.OnClickListener sendClicked = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            sendMessageTaskProvider.get(getApplicationContext()).send(ipAddress.getText().toString(), Integer.parseInt(port.getText().toString()),
-                    message.getText().toString());
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,16 +28,6 @@ public class MainActivity extends RoboActionBarActivity implements NavigationVie
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        send.setOnClickListener(sendClicked);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG).setAction("Action", null).show();
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this, drawer, toolbar, R.string.navigation_drawer_open,
@@ -67,6 +37,9 @@ public class MainActivity extends RoboActionBarActivity implements NavigationVie
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        swapFragment(new BedroomFragment());
+
     }
 
     @Override
@@ -104,25 +77,35 @@ public class MainActivity extends RoboActionBarActivity implements NavigationVie
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+
+        Fragment opening;
         int id = item.getItemId();
 
-        if (id == R.id.nav_camara) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        } else if (id == R.id.nav_slideshow) {
-
-        } else if (id == R.id.nav_manage) {
-
-        } else if (id == R.id.nav_share) {
-
-        } else if (id == R.id.nav_send) {
-
+        if (id == R.id.nav_bedroom) {
+            opening = new BedroomFragment();
+        } else if (id == R.id.nav_livingroom) {
+            opening = new LivingroomFragment();
+        } else if (id == R.id.nav_send_single_data) {
+            opening = new SendSingleDataFragment();
+        } else if (id == R.id.nav_settings) {
+            opening = new SettingsFragment();
+        } else if (id == R.id.nav_about) {
+            opening = new AboutFragment();
+        } else {
+            throw new AssertionError("No such navigation menu item exists.");
         }
+
+        swapFragment(opening);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    private void swapFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.main_fragment_container, fragment);
+        fragmentTransaction.commit();
     }
 }

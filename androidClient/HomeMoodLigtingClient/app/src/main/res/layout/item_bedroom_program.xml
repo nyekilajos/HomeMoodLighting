@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_bedroom_program_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:weightSum="10">
+
+    <TextView
+        android:id="@+id/program_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="6"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        tools:text="Example test program" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="4">
+
+        <View
+            android:id="@+id/color_1"
+            android:layout_width="@dimen/color_indicator_size"
+            android:layout_height="@dimen/color_indicator_size"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <View
+            android:id="@+id/color_2"
+            android:layout_width="@dimen/color_indicator_size"
+            android:layout_height="@dimen/color_indicator_size"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <View
+            android:id="@+id/color_3"
+            android:layout_width="@dimen/color_indicator_size"
+            android:layout_height="@dimen/color_indicator_size"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <View
+            android:id="@+id/color_4"
+            android:layout_width="@dimen/color_indicator_size"
+            android:layout_height="@dimen/color_indicator_size"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <View
+            android:id="@+id/color_5"
+            android:layout_width="@dimen/color_indicator_size"
+            android:layout_height="@dimen/color_indicator_size"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp" />
+
+        <ImageView
+            android:id="@+id/program_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
