@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient;
+package com.nyekilajos.homemoodligtingclient.ui.bedroom;
 
 import roboguice.activity.RoboActionBarActivity;
 import roboguice.inject.InjectView;
@@ -11,7 +11,8 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.google.inject.Inject;
-import com.nyekilajos.homemoodligtingclient.fragment.BedroomProgram;
+import com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView;
+import com.nyekilajos.homemoodligtingclient.R;
 import com.nyekilajos.homemoodligtingclient.persitency.ProgramStore;
 
 /**

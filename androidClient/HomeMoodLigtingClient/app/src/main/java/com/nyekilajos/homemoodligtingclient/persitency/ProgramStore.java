@@ -8,7 +8,7 @@ import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 import com.google.inject.Inject;
-import com.nyekilajos.homemoodligtingclient.fragment.BedroomProgram;
+import com.nyekilajos.homemoodligtingclient.ui.bedroom.BedroomProgram;
 
 /**
  * Created by Lajos_Nyeki on 12/1/2015.

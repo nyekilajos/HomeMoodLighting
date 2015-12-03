@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <com.nyekilajos.homemoodligtingclient.ColorIndicatorView
+        <com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView
             android:id="@+id/color_1"
             android:layout_width="@dimen/color_indicator_size_large"
             android:layout_height="@dimen/color_indicator_size_large"
@@ -49,7 +49,7 @@
             android:background="@color/colorPrimary"
             android:foreground="@drawable/square"/>
 
-        <com.nyekilajos.homemoodligtingclient.ColorIndicatorView
+        <com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView
             android:id="@+id/color_2"
             android:layout_width="@dimen/color_indicator_size_large"
             android:layout_height="@dimen/color_indicator_size_large"
@@ -58,7 +58,7 @@
             android:background="@color/colorPrimary"
             android:foreground="@drawable/square"/>
 
-        <com.nyekilajos.homemoodligtingclient.ColorIndicatorView
+        <com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView
             android:id="@+id/color_3"
             android:layout_width="@dimen/color_indicator_size_large"
             android:layout_height="@dimen/color_indicator_size_large"
@@ -67,7 +67,7 @@
             android:background="@color/colorPrimary"
             android:foreground="@drawable/square"/>
 
-        <com.nyekilajos.homemoodligtingclient.ColorIndicatorView
+        <com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView
             android:id="@+id/color_4"
             android:layout_width="@dimen/color_indicator_size_large"
             android:layout_height="@dimen/color_indicator_size_large"
@@ -76,7 +76,7 @@
             android:background="@color/colorPrimary"
             android:foreground="@drawable/square"/>
 
-        <com.nyekilajos.homemoodligtingclient.ColorIndicatorView
+        <com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView
             android:id="@+id/color_5"
             android:layout_width="@dimen/color_indicator_size_large"
             android:layout_height="@dimen/color_indicator_size_large"

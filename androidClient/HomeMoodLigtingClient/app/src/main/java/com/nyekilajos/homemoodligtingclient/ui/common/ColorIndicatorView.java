@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient;
+package com.nyekilajos.homemoodligtingclient.ui.common;
 
 import android.annotation.TargetApi;
 import android.app.Activity;
@@ -9,6 +9,7 @@ import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
 import android.view.View;
 
+import com.nyekilajos.homemoodligtingclient.R;
 import com.pes.androidmaterialcolorpickerdialog.ColorPicker;
 
 /**

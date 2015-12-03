@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient.fragment;
+package com.nyekilajos.homemoodligtingclient.ui.livingroom;
 
 import roboguice.fragment.RoboFragment;
 

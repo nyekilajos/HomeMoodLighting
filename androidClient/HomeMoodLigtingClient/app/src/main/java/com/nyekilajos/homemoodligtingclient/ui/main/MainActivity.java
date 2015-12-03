@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient;
+package com.nyekilajos.homemoodligtingclient.ui.main;
 
 import roboguice.activity.RoboActionBarActivity;
 
@@ -14,11 +14,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.nyekilajos.homemoodligtingclient.fragment.AboutFragment;
-import com.nyekilajos.homemoodligtingclient.fragment.BedroomFragment;
-import com.nyekilajos.homemoodligtingclient.fragment.LivingroomFragment;
-import com.nyekilajos.homemoodligtingclient.fragment.SendSingleDataFragment;
-import com.nyekilajos.homemoodligtingclient.fragment.SettingsFragment;
+import com.nyekilajos.homemoodligtingclient.R;
+import com.nyekilajos.homemoodligtingclient.ui.about.AboutFragment;
+import com.nyekilajos.homemoodligtingclient.ui.bedroom.BedroomFragment;
+import com.nyekilajos.homemoodligtingclient.ui.livingroom.LivingroomFragment;
+import com.nyekilajos.homemoodligtingclient.ui.bedroom.SendSingleDataFragment;
+import com.nyekilajos.homemoodligtingclient.ui.settings.SettingsFragment;
 
 public class MainActivity extends RoboActionBarActivity implements NavigationView.OnNavigationItemSelectedListener {
 

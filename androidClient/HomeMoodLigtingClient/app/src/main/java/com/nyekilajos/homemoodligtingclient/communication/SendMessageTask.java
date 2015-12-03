@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient;
+package com.nyekilajos.homemoodligtingclient.communication;
 
 import java.io.DataOutputStream;
 import java.io.IOException;

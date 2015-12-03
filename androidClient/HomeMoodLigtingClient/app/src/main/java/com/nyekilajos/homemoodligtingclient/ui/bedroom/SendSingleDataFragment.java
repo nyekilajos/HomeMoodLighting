@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient.fragment;
+package com.nyekilajos.homemoodligtingclient.ui.bedroom;
 
 import roboguice.fragment.RoboFragment;
 import roboguice.inject.ContextScopedProvider;
@@ -14,7 +14,7 @@ import android.widget.EditText;
 
 import com.google.inject.Inject;
 import com.nyekilajos.homemoodligtingclient.R;
-import com.nyekilajos.homemoodligtingclient.SendMessageTask;
+import com.nyekilajos.homemoodligtingclient.communication.SendMessageTask;
 
 /**
  * Created by Lajos_Nyeki on 11/30/2015.
