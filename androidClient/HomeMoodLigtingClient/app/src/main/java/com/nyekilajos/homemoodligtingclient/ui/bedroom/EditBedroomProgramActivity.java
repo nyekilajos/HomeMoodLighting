@@ -6,7 +6,6 @@ import roboguice.inject.InjectView;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.Spinner;
 
@@ -42,11 +41,12 @@ public class EditBedroomProgramActivity extends RoboActionBarActivity {
 
     @Inject
     private ProgramStore programStore;
+    @Inject
+    private BedroomProgramTypeAdapter bedroomProgramTypeAdapter;
 
     private BedroomProgram programToBeEdited;
 
     private int colorCount;
-    private ArrayAdapter<BedroomProgram.BedroomProgramType> spinnerAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,8 +63,7 @@ public class EditBedroomProgramActivity extends RoboActionBarActivity {
     }
 
     private void initUi() {
-        spinnerAdapter = new ArrayAdapter<>(this, R.layout.item_bedroom_program_type_spinner, BedroomProgram.BedroomProgramType.values());
-        typeSpinner.setAdapter(spinnerAdapter);
+        typeSpinner.setAdapter(bedroomProgramTypeAdapter);
         name.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -85,7 +84,7 @@ public class EditBedroomProgramActivity extends RoboActionBarActivity {
 
     private void initWithExistingProgram() {
         name.setText(programToBeEdited.getName());
-        typeSpinner.setSelection(spinnerAdapter.getPosition(programToBeEdited.getType()));
+        typeSpinner.setSelection(bedroomProgramTypeAdapter.getPosition(programToBeEdited.getType()));
         colorCount = programToBeEdited.getColorCount();
         if (colorCount > 0) {
             colorIndicator1.setColor(programToBeEdited.getColor1());
@@ -123,7 +122,7 @@ public class EditBedroomProgramActivity extends RoboActionBarActivity {
             BedroomProgram programToStore = new BedroomProgram(
                     (programToBeEdited != null ? programToBeEdited.getId() : (int) System.currentTimeMillis()), name.getText().toString(), colorCount,
                     colorIndicator1.getColor(), colorIndicator2.getColor(), colorIndicator3.getColor(), colorIndicator4.getColor(),
-                    colorIndicator5.getColor(), BedroomProgram.BedroomProgramType.FADE_IN_OUT);
+                    colorIndicator5.getColor(), (BedroomProgram.BedroomProgramType) typeSpinner.getSelectedItem());
             programStore.storeBedroomProgram(programToStore);
             super.onBackPressed();
         }
