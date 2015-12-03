@@ -19,12 +19,15 @@ import android.view.ViewGroup;
 
 import com.google.inject.Inject;
 import com.nyekilajos.homemoodligtingclient.R;
+import com.nyekilajos.homemoodligtingclient.persitency.BedroomProgram;
 import com.nyekilajos.homemoodligtingclient.persitency.LightingPreferencesHelper;
 import com.nyekilajos.homemoodligtingclient.persitency.ProgramStore;
 import com.nyekilajos.homemoodligtingclient.ui.common.DividerItemDecoration;
 
 /**
- * Created by Lajos_Nyeki on 11/30/2015.
+ * Fragment to show the bedroom programs
+ * 
+ * @author Lajos_Nyeki
  */
 public class BedroomFragment extends RoboFragment {
 

@@ -13,14 +13,16 @@ import com.nyekilajos.homemoodligtingclient.R;
 import com.pes.androidmaterialcolorpickerdialog.ColorPicker;
 
 /**
- * Created by Lajos_Nyeki on 12/2/2015.
+ * Custom view to show and select a color.
+ * 
+ * @author Lajos_Nyeki
  */
 public class ColorIndicatorView extends View {
 
     private int color;
     private State state = State.UNSELECTED;
 
-    private OnClickListener onClickListener = new OnClickListener() {
+    private final OnClickListener onClickListener = new OnClickListener() {
         @Override
         public void onClick(View v) {
             if (state == State.UNSELECTED) {

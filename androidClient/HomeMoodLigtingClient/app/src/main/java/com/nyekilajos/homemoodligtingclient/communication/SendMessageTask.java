@@ -13,7 +13,9 @@ import android.util.Log;
 import com.google.inject.Inject;
 
 /**
- * Created by Lajos_Nyeki on 11/13/2015.
+ * Async task for sending message to a specific ip address (Arduino hardware).
+ * 
+ * @author Lajos_Nyeki 
  */
 public class SendMessageTask extends RoboAsyncTask<Void> {
 
@@ -24,7 +26,7 @@ public class SendMessageTask extends RoboAsyncTask<Void> {
     private String message;
 
     @Inject
-    public SendMessageTask(Context context) {
+    SendMessageTask(Context context) {
         super(context);
     }
 

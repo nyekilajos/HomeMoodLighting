@@ -1,13 +1,15 @@
-package com.nyekilajos.homemoodligtingclient.ui.bedroom;
+package com.nyekilajos.homemoodligtingclient.persitency;
 
 import com.nyekilajos.homemoodligtingclient.R;
 
 /**
- * Created by Lajos_Nyeki on 12/1/2015.
+ * Model class for storing bedroom programs.
+ * 
+ * @author Lajos_Nyeki
  */
 public class BedroomProgram {
 
-    private int id;
+    private final int id;
     private final String name;
     private final int colorCount;
     private final int color1;
@@ -86,12 +88,20 @@ public class BedroomProgram {
     public enum BedroomProgramType {
         SIMPLE_LIGHTING(R.string.simple_lighting_program, R.drawable.bulb), FADE_IN_OUT(R.string.fade_in_out_program, R.drawable.wave);
 
-        final int nameResId;
-        final int iconResId;
+        private final int nameResId;
+        private final int iconResId;
 
         BedroomProgramType(int nameResId, int iconResId) {
             this.nameResId = nameResId;
             this.iconResId = iconResId;
+        }
+
+        public int getNameResId() {
+            return nameResId;
+        }
+
+        public int getIconResId() {
+            return iconResId;
         }
     }
 

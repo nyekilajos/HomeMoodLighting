@@ -15,22 +15,26 @@ import android.widget.TextView;
 
 import com.google.inject.Inject;
 import com.nyekilajos.homemoodligtingclient.R;
+import com.nyekilajos.homemoodligtingclient.persitency.BedroomProgram;
 import com.nyekilajos.homemoodligtingclient.persitency.LightingPreferencesHelper;
 import com.nyekilajos.homemoodligtingclient.persitency.ProgramStore;
 
 /**
- * Created by Lajos_Nyeki on 12/1/2015.
+ * RecyclerView adapter for bedroom programs.
+ * 
+ * @author Lajos_Nyeki
  */
 public class BedroomProgramAdapter extends RecyclerView.Adapter<BedroomProgramAdapter.BedroomProgramViewHolder> {
 
     private List<BedroomProgram> programList;
     private int activeProgramId;
 
-    private Handler handler = new Handler(Looper.getMainLooper());
+    private final Handler handler = new Handler(Looper.getMainLooper());
 
-    private Context context;
-    private ProgramStore programStore;
-    private LightingPreferencesHelper lightingPreferencesHelper;
+    private final Context context;
+    private final ProgramStore programStore;
+    private final LightingPreferencesHelper lightingPreferencesHelper;
+
     private BedroomProgramSelectedListener selectionListener;
 
     @Inject
@@ -126,12 +130,12 @@ public class BedroomProgramAdapter extends RecyclerView.Adapter<BedroomProgramAd
             holder.color5.setVisibility(View.INVISIBLE);
         }
 
-        holder.programType.setImageDrawable(ContextCompat.getDrawable(context, program.getType().iconResId));
+        holder.programType.setImageDrawable(ContextCompat.getDrawable(context, program.getType().getIconResId()));
 
         if (activeProgramId == program.getId()) {
-            holder.checkmark.setVisibility(View.VISIBLE);
+            holder.checkMark.setVisibility(View.VISIBLE);
         } else {
-            holder.checkmark.setVisibility(View.INVISIBLE);
+            holder.checkMark.setVisibility(View.INVISIBLE);
         }
     }
 
@@ -143,20 +147,20 @@ public class BedroomProgramAdapter extends RecyclerView.Adapter<BedroomProgramAd
 
     class BedroomProgramViewHolder extends RecyclerView.ViewHolder {
 
-        View itemContainer;
-        ImageView checkmark;
-        TextView programName;
-        View color1;
-        View color2;
-        View color3;
-        View color4;
-        View color5;
-        ImageView programType;
+        final View itemContainer;
+        final ImageView checkMark;
+        final TextView programName;
+        final View color1;
+        final View color2;
+        final View color3;
+        final View color4;
+        final View color5;
+        final ImageView programType;
 
         public BedroomProgramViewHolder(View itemView) {
             super(itemView);
             itemContainer = itemView.findViewById(R.id.item_bedroom_program_container);
-            checkmark = (ImageView) itemView.findViewById(R.id.program_selected_check);
+            checkMark = (ImageView) itemView.findViewById(R.id.program_selected_check);
             programName = (TextView) itemView.findViewById(R.id.program_name);
             color1 = itemView.findViewById(R.id.color_1);
             color2 = itemView.findViewById(R.id.color_2);

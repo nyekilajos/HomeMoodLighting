@@ -17,7 +17,9 @@ import com.nyekilajos.homemoodligtingclient.R;
 import com.nyekilajos.homemoodligtingclient.communication.SendMessageTask;
 
 /**
- * Created by Lajos_Nyeki on 11/30/2015.
+ * Fragment to provide UI for send single data to an IP address, mainly for debug purposes.
+ *
+ * @author Lajos_Nyeki
  */
 public class SendSingleDataFragment extends RoboFragment {
 

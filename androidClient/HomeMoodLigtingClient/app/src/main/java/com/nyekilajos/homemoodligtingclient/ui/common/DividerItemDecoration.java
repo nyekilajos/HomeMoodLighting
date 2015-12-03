@@ -8,15 +8,15 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 
 /**
- * Created by Lajos_Nyeki on 12/1/2015.
+ * Custom decorator for RecyclerViews to draw a divider line between items.
+ * 
+ * @author Lajos_Nyeki
  */
 public class DividerItemDecoration extends RecyclerView.ItemDecoration {
 
     private static final int[] ATTRS = new int[]{android.R.attr.listDivider};
 
-    private Drawable divider;
-
-    private Context context;
+    private final Drawable divider;
 
     public DividerItemDecoration(Context context) {
         final TypedArray a = context.obtainStyledAttributes(ATTRS);

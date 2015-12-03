@@ -11,16 +11,19 @@ import android.widget.EditText;
 import android.widget.Spinner;
 
 import com.google.inject.Inject;
-import com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView;
 import com.nyekilajos.homemoodligtingclient.R;
+import com.nyekilajos.homemoodligtingclient.persitency.BedroomProgram;
 import com.nyekilajos.homemoodligtingclient.persitency.ProgramStore;
+import com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView;
 
 /**
- * Created by Lajos_Nyeki on 12/2/2015.
+ * Activity for editing bedroom programs.
+ * 
+ * @author Lajos_Nyeki
  */
 public class EditBedroomProgramActivity extends RoboActionBarActivity {
 
-    public static final String EXTRA_BEDROOM_PROGRAM_ID = "extraBedrromProgramId";
+    public static final String EXTRA_BEDROOM_PROGRAM_ID = "extraBedroomProgramId";
 
     @InjectView(R.id.name_of_the_bedroom_program)
     private EditText name;

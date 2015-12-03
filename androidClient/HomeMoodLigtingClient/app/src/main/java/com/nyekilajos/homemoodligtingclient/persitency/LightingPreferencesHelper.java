@@ -6,14 +6,16 @@ import android.content.SharedPreferences;
 import com.google.inject.Inject;
 
 /**
- * Created by Lajos_Nyeki on 12/1/2015.
+ * Helper class for storing and loading preferences.
+ * 
+ * @author Lajos_Nyeki
  */
 public class LightingPreferencesHelper {
 
-    private static final String PREFERENCES_NAME = "lighingPreferences";
+    private static final String PREFERENCES_NAME = "lightingPreferences";
     private static final String ACTIVE_BEDROOM_PROGRAM = "activeBedroomProgram";
 
-    private SharedPreferences sharedPreferences;
+    private final SharedPreferences sharedPreferences;
 
     @Inject
     public LightingPreferencesHelper(Context context) {

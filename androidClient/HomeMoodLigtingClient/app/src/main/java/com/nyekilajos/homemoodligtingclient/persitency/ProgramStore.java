@@ -8,17 +8,18 @@ import android.content.SharedPreferences;
 
 import com.google.gson.Gson;
 import com.google.inject.Inject;
-import com.nyekilajos.homemoodligtingclient.ui.bedroom.BedroomProgram;
 
 /**
- * Created by Lajos_Nyeki on 12/1/2015.
+ * Helper class to store and load programs.
+ * 
+ * @author Lajos_Nyeki
  */
 public class ProgramStore {
 
     private static final String BEDROOM_PROGRAM_STORE_NAME = "bedroomProgramStore";
 
-    private SharedPreferences bedroomStore;
-    private Gson gson;
+    private final SharedPreferences bedroomStore;
+    private final Gson gson;
 
     @Inject
     public ProgramStore(Context context) {
