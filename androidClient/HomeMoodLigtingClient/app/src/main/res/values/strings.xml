@@ -8,4 +8,8 @@
 
     <string name="simple_lighting_program">Simple Lighting</string>
     <string name="fade_in_out_program">Fade In / Out</string>
+    <string name="name_of_program">Name of the program</string>
+    <string name="bedroom_program_type">Program type</string>
+    <string name="pick_colors">Pick colors</string>
+    <string name="error_name_empty">Please add a name to the program</string>
 </resources>

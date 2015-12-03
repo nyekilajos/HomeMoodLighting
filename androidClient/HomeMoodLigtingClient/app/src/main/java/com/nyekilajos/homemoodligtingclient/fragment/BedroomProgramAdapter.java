@@ -3,7 +3,6 @@ package com.nyekilajos.homemoodligtingclient.fragment;
 import java.util.List;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v4.content.ContextCompat;
@@ -73,13 +72,21 @@ public class BedroomProgramAdapter extends RecyclerView.Adapter<BedroomProgramAd
     }
 
     @Override
-    public void onBindViewHolder(BedroomProgramViewHolder holder, int position) {
+    public void onBindViewHolder(final BedroomProgramViewHolder holder, int position) {
         final BedroomProgram program = programList.get(position);
 
         holder.itemContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                selectionListener.onBedroomProgramSelected(program);
+                selectionListener.onBedroomProgramSelected(holder.itemContainer, program);
+            }
+        });
+
+        holder.itemContainer.setOnLongClickListener(new View.OnLongClickListener() {
+            @Override
+            public boolean onLongClick(View v) {
+                selectionListener.onBedroomProgramContextMenu(holder.itemContainer, program);
+                return false;
             }
         });
 
@@ -104,13 +111,13 @@ public class BedroomProgramAdapter extends RecyclerView.Adapter<BedroomProgramAd
         }
         if (program.getColorCount() > 3) {
             holder.color4.setVisibility(View.VISIBLE);
-            holder.color4.setBackgroundColor(program.getColor3());
+            holder.color4.setBackgroundColor(program.getColor4());
         } else {
             holder.color4.setVisibility(View.INVISIBLE);
         }
         if (program.getColorCount() > 4) {
             holder.color5.setVisibility(View.VISIBLE);
-            holder.color5.setBackgroundColor(program.getColor4());
+            holder.color5.setBackgroundColor(program.getColor5());
         } else {
             holder.color5.setVisibility(View.INVISIBLE);
         }
@@ -118,19 +125,22 @@ public class BedroomProgramAdapter extends RecyclerView.Adapter<BedroomProgramAd
         holder.programType.setImageDrawable(ContextCompat.getDrawable(context, program.getType().iconResId));
 
         if (activeProgramId == position) {
-            holder.itemContainer.setBackgroundColor(Color.GREEN);
+            holder.checkmark.setVisibility(View.VISIBLE);
         } else {
-            holder.itemContainer.setBackgroundColor(Color.TRANSPARENT);
+            holder.checkmark.setVisibility(View.INVISIBLE);
         }
     }
 
-    public static interface BedroomProgramSelectedListener {
-        void onBedroomProgramSelected(BedroomProgram bedroomProgram);
+    public interface BedroomProgramSelectedListener {
+        void onBedroomProgramSelected(View view, BedroomProgram bedroomProgram);
+
+        void onBedroomProgramContextMenu(View view, BedroomProgram bedroomProgram);
     }
 
     class BedroomProgramViewHolder extends RecyclerView.ViewHolder {
 
         View itemContainer;
+        ImageView checkmark;
         TextView programName;
         View color1;
         View color2;
@@ -142,6 +152,7 @@ public class BedroomProgramAdapter extends RecyclerView.Adapter<BedroomProgramAd
         public BedroomProgramViewHolder(View itemView) {
             super(itemView);
             itemContainer = itemView.findViewById(R.id.item_bedroom_program_container);
+            checkmark = (ImageView) itemView.findViewById(R.id.program_selected_check);
             programName = (TextView) itemView.findViewById(R.id.program_name);
             color1 = itemView.findViewById(R.id.color_1);
             color2 = itemView.findViewById(R.id.color_2);

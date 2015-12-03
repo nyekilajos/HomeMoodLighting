@@ -1,74 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item_bedroom_program_container"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:clickable="true"
     android:focusable="true"
     android:foreground="?android:attr/selectableItemBackground"
-    android:orientation="horizontal"
-    android:paddingBottom="8dp"
-    android:paddingTop="8dp"
-    android:weightSum="10">
+    android:padding="8dp">
 
-    <TextView
-        android:id="@+id/program_name"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="6"
-        android:paddingLeft="4dp"
-        android:paddingRight="4dp"
-        tools:text="Example test program" />
+    <ImageView
+        android:id="@+id/program_selected_check"
+        android:layout_width="@dimen/program_selected_check_size"
+        android:layout_height="@dimen/program_selected_check_size"
+        android:src="@drawable/checkmark"
+        android:layout_centerVertical="true"/>
 
     <LinearLayout
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="4">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@id/program_selected_check"
+        android:orientation="vertical">
 
-        <View
-            android:id="@+id/color_1"
-            android:layout_width="@dimen/color_indicator_size"
-            android:layout_height="@dimen/color_indicator_size"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp" />
-
-        <View
-            android:id="@+id/color_2"
-            android:layout_width="@dimen/color_indicator_size"
-            android:layout_height="@dimen/color_indicator_size"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp" />
-
-        <View
-            android:id="@+id/color_3"
-            android:layout_width="@dimen/color_indicator_size"
-            android:layout_height="@dimen/color_indicator_size"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp" />
-
-        <View
-            android:id="@+id/color_4"
-            android:layout_width="@dimen/color_indicator_size"
-            android:layout_height="@dimen/color_indicator_size"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp" />
-
-        <View
-            android:id="@+id/color_5"
-            android:layout_width="@dimen/color_indicator_size"
-            android:layout_height="@dimen/color_indicator_size"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp" />
-
-        <ImageView
-            android:id="@+id/program_icon"
+        <TextView
+            android:id="@+id/program_name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:layout_marginLeft="4dp"
-            android:layout_marginRight="4dp" />
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Example test program" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp">
+
+            <View
+                android:id="@+id/color_1"
+                android:layout_width="@dimen/color_indicator_size"
+                android:layout_height="@dimen/color_indicator_size"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@color/colorPrimary"
+                android:foreground="@drawable/square"/>
+
+            <View
+                android:id="@+id/color_2"
+                android:layout_width="@dimen/color_indicator_size"
+                android:layout_height="@dimen/color_indicator_size"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@color/colorPrimary"
+                android:foreground="@drawable/square"/>
+
+            <View
+                android:id="@+id/color_3"
+                android:layout_width="@dimen/color_indicator_size"
+                android:layout_height="@dimen/color_indicator_size"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@color/colorPrimary"
+                android:foreground="@drawable/square"/>
+
+            <View
+                android:id="@+id/color_4"
+                android:layout_width="@dimen/color_indicator_size"
+                android:layout_height="@dimen/color_indicator_size"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@color/colorPrimary"
+                android:foreground="@drawable/square"/>
+
+            <View
+                android:id="@+id/color_5"
+                android:layout_width="@dimen/color_indicator_size"
+                android:layout_height="@dimen/color_indicator_size"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:background="@color/colorPrimary"
+                android:foreground="@drawable/square"/>
+
+        </LinearLayout>
 
     </LinearLayout>
 
+    <ImageView
+        android:id="@+id/program_icon"
+        android:layout_width="@dimen/program_selected_check_size"
+        android:layout_height="@dimen/program_selected_check_size"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:src="@drawable/bulb" />
 
-</LinearLayout>
+</RelativeLayout>

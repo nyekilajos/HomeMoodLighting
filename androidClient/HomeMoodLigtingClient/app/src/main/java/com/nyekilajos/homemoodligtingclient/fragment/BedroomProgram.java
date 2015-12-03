@@ -65,6 +65,24 @@ public class BedroomProgram {
         return type;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o)
+            return true;
+        if (o == null || getClass() != o.getClass())
+            return false;
+
+        BedroomProgram program = (BedroomProgram) o;
+
+        return id == program.id;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return id;
+    }
+
     public enum BedroomProgramType {
         SIMPLE_LIGHTING(R.string.simple_lighting_program, R.drawable.bulb), FADE_IN_OUT(R.string.fade_in_out_program, R.drawable.wave);
 
