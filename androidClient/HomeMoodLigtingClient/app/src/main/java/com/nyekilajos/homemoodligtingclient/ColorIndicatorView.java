@@ -22,7 +22,7 @@ public class ColorIndicatorView extends View {
     private OnClickListener onClickListener = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (state == State.SELECTED) {
+            if (state == State.UNSELECTED) {
                 final ColorPicker cp = new ColorPicker((Activity) getContext(), Color.red(color), Color.green(color), Color.blue(color));
                 cp.show();
                 cp.findViewById(R.id.okColorButton).setOnClickListener(new View.OnClickListener() {
@@ -59,6 +59,8 @@ public class ColorIndicatorView extends View {
 
     private void init() {
         setOnClickListener(onClickListener);
+        setBackground(null);
+        setBackground(ContextCompat.getDrawable(getContext(), R.drawable.add));
     }
 
     public int getColor() {

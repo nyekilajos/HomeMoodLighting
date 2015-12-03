@@ -12,4 +12,6 @@
     <string name="bedroom_program_type">Program type</string>
     <string name="pick_colors">Pick colors</string>
     <string name="error_name_empty">Please add a name to the program</string>
+    <string name="program_deleted">Program deleted</string>
+    <string name="undo">Undo</string>
 </resources>

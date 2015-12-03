@@ -41,4 +41,8 @@ public class ProgramStore {
         }
         return programs;
     }
+
+    public void removeBedroomProgram(BedroomProgram bedroomProgram) {
+        bedroomStore.edit().remove(Integer.toString(bedroomProgram.getId())).commit();
+    }
 }

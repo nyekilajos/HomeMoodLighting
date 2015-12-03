@@ -71,6 +71,10 @@ public class BedroomProgramAdapter extends RecyclerView.Adapter<BedroomProgramAd
         return programList.size();
     }
 
+    public BedroomProgram getItemFromPosition(int position) {
+        return programList.get(position);
+    }
+
     @Override
     public void onBindViewHolder(final BedroomProgramViewHolder holder, int position) {
         final BedroomProgram program = programList.get(position);
@@ -124,7 +128,7 @@ public class BedroomProgramAdapter extends RecyclerView.Adapter<BedroomProgramAd
 
         holder.programType.setImageDrawable(ContextCompat.getDrawable(context, program.getType().iconResId));
 
-        if (activeProgramId == position) {
+        if (activeProgramId == program.getId()) {
             holder.checkmark.setVisibility(View.VISIBLE);
         } else {
             holder.checkmark.setVisibility(View.INVISIBLE);
