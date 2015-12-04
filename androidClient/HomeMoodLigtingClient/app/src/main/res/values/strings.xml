@@ -28,4 +28,6 @@
     <string name="ip_address">IP address</string>
     <string name="port">Port</string>
     <string name="number_of_leds">Number of LEDs</string>
+    <string name="frame_count_label">Frame count:</string>
+    <string name="frames_per_sec_label">Frames per sec:</string>
 </resources>

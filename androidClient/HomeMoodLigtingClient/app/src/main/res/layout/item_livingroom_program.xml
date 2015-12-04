@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/item_livingroom_program_container"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/program_selected_check"
+        android:layout_width="@dimen/program_selected_check_size"
+        android:layout_height="@dimen/program_selected_check_size"
+        android:layout_centerVertical="true"
+        android:src="@drawable/checkmark" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_toRightOf="@id/program_selected_check"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/livingroom_program_name"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            tools:text="Example test program" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="4dp"
+            android:paddingTop="4dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginRight="8dp"
+                android:text="@string/frame_count_label"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/frame_count"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="75" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/frames_per_sec_label"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/frames_per_sec"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="8dp"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                tools:text="25" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
