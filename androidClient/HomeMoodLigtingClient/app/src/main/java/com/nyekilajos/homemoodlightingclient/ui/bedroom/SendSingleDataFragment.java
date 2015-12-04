@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient.ui.bedroom;
+package com.nyekilajos.homemoodlightingclient.ui.bedroom;
 
 import roboguice.fragment.RoboFragment;
 import roboguice.inject.ContextScopedProvider;
@@ -13,8 +13,8 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.google.inject.Inject;
-import com.nyekilajos.homemoodligtingclient.R;
-import com.nyekilajos.homemoodligtingclient.communication.SendMessageTask;
+import com.nyekilajos.homemoodlightingclient.R;
+import com.nyekilajos.homemoodlightingclient.communication.SendMessageTask;
 
 /**
  * Fragment to provide UI for send single data to an IP address, mainly for debug purposes.

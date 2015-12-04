@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient.persitency;
+package com.nyekilajos.homemoodlightingclient.persitency;
 
 import java.util.ArrayList;
 import java.util.List;

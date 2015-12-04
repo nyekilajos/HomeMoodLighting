@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient;
+package com.nyekilajos.homemoodlightingclient;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

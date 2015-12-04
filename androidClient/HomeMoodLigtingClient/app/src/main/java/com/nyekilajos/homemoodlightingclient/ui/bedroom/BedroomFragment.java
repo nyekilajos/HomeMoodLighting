@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient.ui.bedroom;
+package com.nyekilajos.homemoodlightingclient.ui.bedroom;
 
 import roboguice.fragment.RoboFragment;
 import roboguice.inject.InjectView;
@@ -18,11 +18,11 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.google.inject.Inject;
-import com.nyekilajos.homemoodligtingclient.R;
-import com.nyekilajos.homemoodligtingclient.persitency.BedroomProgram;
-import com.nyekilajos.homemoodligtingclient.persitency.LightingPreferencesHelper;
-import com.nyekilajos.homemoodligtingclient.persitency.ProgramStore;
-import com.nyekilajos.homemoodligtingclient.ui.common.DividerItemDecoration;
+import com.nyekilajos.homemoodlightingclient.R;
+import com.nyekilajos.homemoodlightingclient.persitency.BedroomProgram;
+import com.nyekilajos.homemoodlightingclient.persitency.LightingPreferencesHelper;
+import com.nyekilajos.homemoodlightingclient.persitency.ProgramStore;
+import com.nyekilajos.homemoodlightingclient.ui.common.DividerItemDecoration;
 
 /**
  * Fragment to show the bedroom programs

@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient.ui.bedroom;
+package com.nyekilajos.homemoodlightingclient.ui.bedroom;
 
 import java.util.Arrays;
 
@@ -12,8 +12,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.inject.Inject;
-import com.nyekilajos.homemoodligtingclient.R;
-import com.nyekilajos.homemoodligtingclient.persitency.BedroomProgram;
+import com.nyekilajos.homemoodlightingclient.R;
+import com.nyekilajos.homemoodlightingclient.persitency.BedroomProgram;
 
 /**
  * Adapter for displaying bedroom program types with a spinner.

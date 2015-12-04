@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient.ui.common;
+package com.nyekilajos.homemoodlightingclient.ui.common;
 
 import android.content.Context;
 import android.content.res.TypedArray;

@@ -1,6 +1,6 @@
-package com.nyekilajos.homemoodligtingclient.persitency;
+package com.nyekilajos.homemoodlightingclient.persitency;
 
-import com.nyekilajos.homemoodligtingclient.R;
+import com.nyekilajos.homemoodlightingclient.R;
 
 /**
  * Model class for storing bedroom programs.

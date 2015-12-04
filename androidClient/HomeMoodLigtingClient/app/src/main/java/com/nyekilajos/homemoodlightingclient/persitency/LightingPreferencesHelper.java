@@ -1,4 +1,4 @@
-package com.nyekilajos.homemoodligtingclient.persitency;
+package com.nyekilajos.homemoodlightingclient.persitency;
 
 import android.content.Context;
 import android.content.SharedPreferences;
