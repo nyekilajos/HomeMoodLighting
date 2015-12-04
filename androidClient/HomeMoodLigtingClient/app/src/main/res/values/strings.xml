@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HomeMoodLigtingClient</string>
+    <string name="app_name">HomeMoodLightingClient</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -14,4 +14,15 @@
     <string name="error_name_empty">Please add a name to the program</string>
     <string name="program_deleted">Program deleted</string>
     <string name="undo">Undo</string>
+    <string name="send_single_ip">Type IP address and port to communicate with the Arduino.</string>
+    <string name="send_single_ip_hint">IP address</string>
+    <string name="send_single_port_hint">port</string>
+    <string name="send_single_message">Type the message to be sent to Arduino.</string>
+    <string name="send_single_message_hint">Message</string>
+    <string name="send">Send</string>
+    <string name="bedroom">Bedroom</string>
+    <string name="livingroom">Livingroom</string>
+    <string name="send_single_data">Send single data</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
 </resources>

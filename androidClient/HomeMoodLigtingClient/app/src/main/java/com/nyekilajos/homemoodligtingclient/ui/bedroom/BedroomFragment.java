@@ -31,7 +31,7 @@ import com.nyekilajos.homemoodligtingclient.ui.common.DividerItemDecoration;
  */
 public class BedroomFragment extends RoboFragment {
 
-    @InjectView(R.id.cordinator_layout_bedroom_fragment)
+    @InjectView(R.id.coordinator_layout_bedroom_fragment)
     private CoordinatorLayout coordinatorLayout;
     @InjectView(R.id.bedroom_programs)
     private RecyclerView bedroomRecyclerView;

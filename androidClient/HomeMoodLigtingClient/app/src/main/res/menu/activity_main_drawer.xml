@@ -5,22 +5,22 @@
         <item
             android:id="@+id/nav_bedroom"
             android:icon="@drawable/bed"
-            android:title="Bedroom" />
+            android:title="@string/bedroom" />
         <item
             android:id="@+id/nav_livingroom"
             android:icon="@drawable/sofa"
-            android:title="Livingroom" />
+            android:title="@string/livingroom" />
         <item
             android:id="@+id/nav_send_single_data"
             android:icon="@android:drawable/ic_menu_send"
-            android:title="Send single data" />
+            android:title="@string/send_single_data" />
         <item
             android:id="@+id/nav_settings"
             android:icon="@android:drawable/ic_menu_manage"
-            android:title="Settings" />
+            android:title="@string/settings" />
         <item
             android:id="@+id/nav_about"
             android:icon="@android:drawable/ic_menu_info_details"
-            android:title="About" />
+            android:title="@string/about" />
     </group>
 </menu>

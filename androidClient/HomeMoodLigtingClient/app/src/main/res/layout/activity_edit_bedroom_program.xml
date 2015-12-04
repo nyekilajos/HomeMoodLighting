@@ -47,7 +47,7 @@
             android:layout_marginLeft="@dimen/default_ui_spacing"
             android:layout_marginRight="@dimen/default_ui_spacing"
             android:background="@color/colorPrimary"
-            android:foreground="@drawable/square"/>
+            android:foreground="@drawable/square" />
 
         <com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView
             android:id="@+id/color_2"
@@ -56,7 +56,7 @@
             android:layout_marginLeft="@dimen/default_ui_spacing"
             android:layout_marginRight="@dimen/default_ui_spacing"
             android:background="@color/colorPrimary"
-            android:foreground="@drawable/square"/>
+            android:foreground="@drawable/square" />
 
         <com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView
             android:id="@+id/color_3"
@@ -65,7 +65,7 @@
             android:layout_marginLeft="@dimen/default_ui_spacing"
             android:layout_marginRight="@dimen/default_ui_spacing"
             android:background="@color/colorPrimary"
-            android:foreground="@drawable/square"/>
+            android:foreground="@drawable/square" />
 
         <com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView
             android:id="@+id/color_4"
@@ -74,7 +74,7 @@
             android:layout_marginLeft="@dimen/default_ui_spacing"
             android:layout_marginRight="@dimen/default_ui_spacing"
             android:background="@color/colorPrimary"
-            android:foreground="@drawable/square"/>
+            android:foreground="@drawable/square" />
 
         <com.nyekilajos.homemoodligtingclient.ui.common.ColorIndicatorView
             android:id="@+id/color_5"
@@ -83,7 +83,7 @@
             android:layout_marginLeft="@dimen/default_ui_spacing"
             android:layout_marginRight="@dimen/default_ui_spacing"
             android:background="@color/colorPrimary"
-            android:foreground="@drawable/square"/>
+            android:foreground="@drawable/square" />
 
     </LinearLayout>
 

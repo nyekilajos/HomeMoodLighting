@@ -27,7 +27,7 @@ public class SendSingleDataFragment extends RoboFragment {
     private EditText ipAddress;
     @InjectView(R.id.port)
     private EditText port;
-    @InjectView(R.id.messege_to_be_sent)
+    @InjectView(R.id.message_to_be_sent)
     private EditText message;
     @InjectView(R.id.send_button)
     private Button send;
