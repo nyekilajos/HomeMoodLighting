@@ -25,7 +25,7 @@ public class ColorIndicatorView extends View {
     private final OnClickListener onClickListener = new OnClickListener() {
         @Override
         public void onClick(View v) {
-            if (state == State.UNSELECTED) {
+            if (state != State.DISABLED) {
                 final ColorPicker cp = new ColorPicker((Activity) getContext(), Color.red(color), Color.green(color), Color.blue(color));
                 cp.show();
                 cp.findViewById(R.id.okColorButton).setOnClickListener(new View.OnClickListener() {
